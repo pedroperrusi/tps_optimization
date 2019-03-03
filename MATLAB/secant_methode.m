@@ -8,8 +8,8 @@ while(diff > epsilon && counter < max_counter)
    % on estime un troisieme point
    X2 = X1 - dfunc(X1)*diff / (dfunc(X0)-dfunc(X1));
    diff = abs(X2 - X1);
-   X1 = X2;
    X0 = X1;
+   X1 = X2;
    counter = counter + 1;
 end
 Xmin = mean([X1 X2]);
