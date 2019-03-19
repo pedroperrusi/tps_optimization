@@ -22,9 +22,9 @@ xo = [0.5 1.25 0.1]';
 x_old = xo;
 
 % initialize F
-F = zeros(length(y), 1); % square matrix of dimensions (m, 1)
+F = zeros(length(y), 1); % matrix of dimensions (m, 1)
 % initialize J
-J = zeros(length(y), length(xo)); % square matrix of dimensions (m, 3)
+J = zeros(length(y), length(xo)); % matrix of dimensions (m, 3)
 
 while (diff > epsilon && counter < max_interactions)
     % construct the Function and Jacobian matrix for x_old
