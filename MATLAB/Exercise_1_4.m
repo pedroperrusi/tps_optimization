@@ -9,7 +9,7 @@ titleSize = 36;
 legendSize = 20;
 labelSize = 18;
 lineWidith = 4;
-markerSize = 2*lineWidith
+markerSize = 2*lineWidith;
 
 %% We create the surface of interest for the function
 x1 = -5 : 0.1 : 5;
@@ -33,7 +33,7 @@ contourf(X_1,X_2,f,20);
 xlabel('X_1', 'FontSize', labelSize)
 ylabel('X_2', 'FontSize', labelSize)
 zlabel('f(X_1, X_2)', 'FontSize', 16);
-title('Exercise 1.4', 'FontSize', 'FontSize', titleSize)
+title('Exercise 1.4', 'FontSize', titleSize)
 grid on; hold on;
 colorbar;
 plot(2, 1)

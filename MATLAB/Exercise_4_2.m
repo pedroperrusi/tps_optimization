@@ -4,6 +4,9 @@
 %   - Pedro Henrique Suruagy Perrusi
 % Prof :  Omran Hassan
 
+%% Disable ezplot warning
+warning('off', 'MATLAB:ezplotfeval:NotVectorized');
+
 %% Plot Params
 titleSize = 36;
 legendSize = 20;
