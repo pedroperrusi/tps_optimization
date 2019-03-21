@@ -1,4 +1,9 @@
 %% Exercise 3.1
+% Authors : 
+%   - Lucas Emilio Mendes Ferreira
+%   - Pedro Henrique Suruagy Perrusi
+% Prof :  Omran Hassan
+
 
 %% Definition de la fonction principale
 % fonction auxiliaire (exponent)
@@ -32,7 +37,7 @@ epsilon = 0.1; % tolerance
 max_interactions = 1e5;
 [alpha_min, counter] = golden_section(func_alpha, alpha_possibles, rho, epsilon, max_interactions);
 
-%% Visualiser le probleme de line search ?
-figure; hold on; grid on;
-plot(alpha_possibles, func_alpha(alpha_possibles))
-plot(alpha_min, func_alpha(alpha_min), '*');
+%% Visualiser le probleme de line search 
+% figure; hold on; grid on;
+% plot(alpha_possibles, func_alpha(alpha_possibles))
+% plot(alpha_min, func_alpha(alpha_min), '*');

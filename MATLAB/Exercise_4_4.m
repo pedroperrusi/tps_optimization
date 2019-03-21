@@ -1,6 +1,16 @@
 %% Exercise 4.4
-% Author : Pedro Henrique Suruagy Perrusi
+% Authors : 
+%   - Lucas Emilio Mendes Ferreira
+%   - Pedro Henrique Suruagy Perrusi
 % Prof :  Omran Hassan
+
+%% Plot Params
+titleSize = 36;
+legendSize = 20;
+labelSize = 18;
+lineWidith = 4;
+markerSize = 2*lineWidith;
+
 %% load the data
 load('data/P4_4.mat')
 %% Objective
@@ -18,6 +28,7 @@ Jf_phi = @(x, t) - x(1) * cos(x(2) * t + x(3));
 counter = 0;
 diff = 1e5; % arbitrary big value (may change depending on the functions)
 
+% Initial Conditions
 xo = [0.5 1.25 0.1]';
 x_old = xo;
 
@@ -45,11 +56,12 @@ x_min = x_new;
 
 %% plot data
 figure; hold on; grid on ;
-plot(t, y, 'LineWidth', 2);
-xlabel('t')
-ylabel('y')
+plot(t, y, '*', 'LineWidth', lineWidith, 'MarkerSize', markerSize);
+xlabel('t', 'FontSize', labelSize)
+ylabel('y', 'FontSize', labelSize)
 %% plot results
 ye = x_min(1) * sin(t*x_min(2) + x_min(3));
-plot(t, ye, 'LineWidth', 2);
-title('Exercise 4.4')
-legend('raw data', [num2str(x_min(1)) '*sin(' num2str(x_min(2)) 't + ' num2str(x_min(3)) ')'])
+plot(t, ye, '--', 'LineWidth', lineWidith);
+title('Exercise 4.4', 'FontSize', titleSize)
+lgd = legend('raw data', ['Sinusoidal fit :' num2str(x_min(1)) ' sin(' num2str(x_min(2)) 't + ' num2str(x_min(3)) ')']);
+lgd.FontSize = legendSize;

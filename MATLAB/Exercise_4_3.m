@@ -1,6 +1,16 @@
 %% Exercise 4.4
-% Author : Pedro Henrique Suruagy Perrusi
+% Authors : 
+%   - Lucas Emilio Mendes Ferreira
+%   - Pedro Henrique Suruagy Perrusi
 % Prof :  Omran Hassan
+
+%% Plot Params
+titleSize = 36;
+legendSize = 20;
+labelSize = 18;
+lineWidith = 4;
+markerSize = 2*lineWidith;
+
 %% load the data
 load('data/P4_3.mat')
 %% Objective
@@ -17,9 +27,10 @@ x_min = A_pseudinverse * b;
 
 %% plot data
 figure;  hold on; grid on ;
-plot(t, y, 'LineWidth', 2);
-plot(t, x_min(1) + t*x_min(2), 'LineWidth', 2);
-xlabel('t')
-ylabel('y')
-title('Exercise 4.3')
-legend('raw data', [num2str(x_min(1)) ' + ' num2str(x_min(2)) '* t'])
+plot(t, y, '*', 'LineWidth', lineWidith, 'MarkerSize', markerSize);
+plot(t, x_min(1) + t*x_min(2), '--', 'LineWidth', lineWidith);
+xlabel('t', 'FontSize', labelSize)
+ylabel('y', 'FontSize', labelSize)
+title('Exercise 4.3', 'FontSize', titleSize)
+lgd = legend('raw data', [ 'linear fit: ' num2str(x_min(1)) ' + ' num2str(x_min(2)) '* t']);
+lgd.FontSize = legendSize;

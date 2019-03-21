@@ -1,6 +1,9 @@
-%% TP Optimization TPS 2018-19
-% Author : Pedro Henrique Suruagy Perrusi
+%% TP 2 Optimization TPS 2018-19
+% Authors : 
+%   - Lucas Emilio Mendes Ferreira
+%   - Pedro Henrique Suruagy Perrusi
 % Prof :  Omran Hassan
+
 %% Initial Setup
 clear all;
 close all;
